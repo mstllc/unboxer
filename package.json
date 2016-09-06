@@ -1,0 +1,11 @@
+{
+  "name": "unboxer",
+  "description": "Watch Whatbox for file changes and prepare media for consumption",
+  "private": true,
+  "scripts": {
+    "start": "./node_modules/.bin/acting"
+  },
+  "dependencies": {
+    "acting": "git+ssh://git@gitlab.com:mst1228/acting.git#master"
+  }
+}
