@@ -1,5 +1,3 @@
-// Jason.Bourne.2016.HC.720p.HDRip.X264.AC3-EVO.mkv
-
 const acting = require('acting')
 const media = require('./lib/media.js')
 const names = require('./lib/names.js')
@@ -7,8 +5,8 @@ const path = require('path')
 const fs = require('fs-extra')
 
 const VIDEO_EXTENSIONS = ['.mkv', '.avi', '.mp4']
-const MOVIES_PATH = '/Users/max/Media/Movies'
-const TV_PATH = '/Users/max/Media/TV'
+const MOVIES_PATH = '/home/mst1228/Media/Movies'
+const TV_PATH = '/home/mst1228/Media/TV'
 
 acting.scene(path.join(__dirname, 'passthepopcorn.me')).newFile(media.mediaFile(mediaFile => {
   mediaFile.assertHasExtension(VIDEO_EXTENSIONS)
