@@ -5,10 +5,11 @@ const path = require('path')
 const fs = require('fs-extra')
 
 const VIDEO_EXTENSIONS = ['.mkv', '.avi', '.mp4']
+const FINISHED_PATH = '/home/mst1228/finished'
 const MOVIES_PATH = '/home/mst1228/Media/Movies'
 const TV_PATH = '/home/mst1228/Media/TV'
 
-acting.scene(path.join(__dirname, 'passthepopcorn.me')).newFile(media.mediaFile(mediaFile => {
+acting.scene(path.join(FINISHED_PATH, 'passthepopcorn.me')).newFile(media.mediaFile(mediaFile => {
   mediaFile.assertHasExtension(VIDEO_EXTENSIONS)
     .then(() => (mediaFile.name = names.nameFromPTPFileName(mediaFile.name)))
     .then(() => (mediaFile.makePathToFileInFolder(MOVIES_PATH)))
@@ -18,7 +19,7 @@ acting.scene(path.join(__dirname, 'passthepopcorn.me')).newFile(media.mediaFile(
     })
 }))
 
-acting.scene(path.join(__dirname, 'passthepopcorn.me')).newFolder(media.mediaFolder(mediaFolder => {
+acting.scene(path.join(FINISHED_PATH, 'passthepopcorn.me')).newFolder(media.mediaFolder(mediaFolder => {
   mediaFolder.refreshFileList()
     .then(() => (mediaFolder.findFileWithExtension(VIDEO_EXTENSIONS)))
     .then(() => (mediaFolder.name = names.nameFromPTPFileName(mediaFolder.name)))
@@ -29,7 +30,7 @@ acting.scene(path.join(__dirname, 'passthepopcorn.me')).newFolder(media.mediaFol
     })
 }))
 
-acting.scene(path.join(__dirname, 'sceneaccess.me')).newFolder(media.mediaFolder(mediaFolder => {
+acting.scene(path.join(FINISHED_PATH, 'sceneaccess.me')).newFolder(media.mediaFolder(mediaFolder => {
   mediaFolder.refreshFileList()
     .then(() => (mediaFolder.unrarIfNecessary()))
     .then(() => (mediaFolder.findFileWithExtension(VIDEO_EXTENSIONS)))
