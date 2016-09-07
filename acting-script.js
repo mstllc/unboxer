@@ -30,7 +30,7 @@ acting.scene(path.join(FINISHED_PATH, 'passthepopcorn.me')).newFolder(media.medi
     })
 }))
 
-acting.scene(path.join(FINISHED_PATH, 'sceneaccess.me')).newFolder(media.mediaFolder(mediaFolder => {
+acting.scene(path.join(FINISHED_PATH, 'sceneaccess.eu')).newFolder(media.mediaFolder(mediaFolder => {
   mediaFolder.refreshFileList()
     .then(() => (mediaFolder.unrarIfNecessary()))
     .then(() => (mediaFolder.findFileWithExtension(VIDEO_EXTENSIONS)))
