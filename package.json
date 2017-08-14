@@ -6,7 +6,7 @@
     "start": "./node_modules/.bin/acting"
   },
   "dependencies": {
-    "acting": "git+ssh://git@gitlab.com:mst1228/acting.git#master",
+    "acting": "git+https://github.com/thorsonmscott/acting.git",
     "async": "^2.0.1",
     "bluebird": "^3.4.6",
     "fs-extra": "^0.30.0"
